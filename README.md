@@ -1,5 +1,7 @@
 # Simulación de equipos y protocolos con OMNeT++
 
+> *Proyecto realizado para la asignatura **Rendimiento en redes de telecomunicación** del Máster en Ingeniería de Telecomunicación de la UPV/EHU.*
+
 ## 🌐 Descripción general
 Se ha implementado la red de colas propuesta haciendo uso del protocolo *Stop & Wait*. Esta implementación se ha realizado mediante OMNeT++ creando tres tipos de nodos:
 
