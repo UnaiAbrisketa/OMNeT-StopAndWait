@@ -97,12 +97,12 @@ void NetworkNode::sendNew(CustomPacket *pkt) {
         gateIndex = 1;
 
     if (queue[gateIndex] -> isEmpty()) {
-        EV << "Queue is empty, send packet and wait";
+        EV << "Queue is empty, send packet and wait\n";
         // Insert in queue (it may have to be sent again)
         queue[gateIndex] -> insert(pkt);
         sendPacket(pkt, gateIndex);
     } else {
-        EV << "Queue is not empty, add to back and wait";
+        EV << "Queue is not empty, add to back and wait\n";
         queue[gateIndex] -> insert(pkt);
     }
 }

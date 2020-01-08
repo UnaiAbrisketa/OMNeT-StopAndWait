@@ -21,6 +21,7 @@ simple Source
 {
     parameters:
         @display("i=block/source");
+        double meanPacketLength;
     gates:
         output outPort;
 }
@@ -71,12 +72,15 @@ network StopAndWait
         }
         source1: Source {
             @display("p=29.4,78.96");
+            meanPacketLength = 1000/3;
         }
         source2: Source {
             @display("p=29.4,33.6");
+            meanPacketLength = 1000/3;
         }
         source3: Source {
             @display("p=29.4,127.68");
+            meanPacketLength = 1000/3;
         }
     connections:
         node1.outPort[0] --> Channel --> node2.inPort[2];
