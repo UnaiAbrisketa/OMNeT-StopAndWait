@@ -54,7 +54,7 @@ for(int i = 0; i < departures.size(); i++) {
 }
 return departures;
 ```
-En la inicialización del módulo, se obtiene un vector de tiempos de salida (de la fuente) y se programan todos los paquetes para esos tiempos mediante la función `scheduleAt()`. Esta función no envía directamente los paquetes al siguiente nodo, lo que hace es generar un evento en el propio módulo, que es cazado mediante la función `handleMessage()`, recibiendo como parámetro el paquete a enviar. Por este motivo, es en esta función donde debe declararse el envío del paquete mediante la función `send()`, indicando también el puerto por el que se debe enviar.
+En la inicialización del módulo, se obtiene un vector de tiempos de salida (de la fuente) y se programan todos los paquetes para esos tiempos mediante la función `scheduleAt()`. Esta función no envía directamente los paquetes al siguiente nodo, lo que hace es generar un evento en el propio módulo, que es cazado mediante la función `handleMessage()`, recibiendo como parámetro el paquete a enviar. Por este motivo, es en esta función donde debe declararse el envío del paquete mediante la función `send()`, indicando también el puerto por el que se debe enviar. También durante la inicialización se obtiene un vector de longitudes variables, distribuidas de forma exponencial en base a la media obtenida del parámetro `meanPacketLength`, asignándose estas longitudes a los paquetes a medida que se generan.
 
 ## 🔀 Módulo `NetworkNode`
 
